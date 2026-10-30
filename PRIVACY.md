@@ -1,8 +1,8 @@
 # Retono — Privacy Policy
 
-_Last updated: October 12, 2026_
+_Last updated: October 30, 2026_
 
-Retono ("the app") is a music practice app: it changes the key and tempo of songs, separates vocals and instruments, and shows chords. This policy explains what happens with your data.
+Retono ("the app") is a music practice app: it changes the key and tempo of songs, separates vocals and instruments, shows chords, and has a metronome and an instrument tuner. This policy explains what happens with your data.
 
 ## Summary
 
@@ -15,6 +15,10 @@ Retono ("the app") is a music practice app: it changes the key and tempo of song
 - Files you export are saved only where you choose.
 - Deleting a song in the app removes the app's copy. Uninstalling the app removes all of its data.
 
+## Microphone (tuner)
+
+The tuner listens through the microphone to show which note you are playing. The sound is analysed **on your device, in real time**, and immediately discarded: it is **never recorded, saved or sent anywhere**. The microphone is used only while the tuner screen is open, and only if you allow it. The rest of the app works without this permission.
+
 ## Internet access
 
 The app uses the internet for one thing only: **downloading the separation models** (neural network files) the first time you use separation. The files are downloaded from public file hosting (jsDelivr CDN or GitHub). As with any download, these services see your device's IP address and standard request information; the app sends no other data to them. You can also add the model files manually without any download.
@@ -24,8 +28,9 @@ The app uses the internet for one thing only: **downloading the separation model
 - **Notifications** — to show playback controls and the progress of a song being separated.
 - **Foreground service** — to keep playback and separation running while the app is in the background.
 - **Internet** — only for the model download described above.
+- **Microphone** — only for the tuner, as described above; asked the first time you open the tuner.
 
-The app does not request access to your contacts, location, camera, microphone or accounts.
+The app does not request access to your contacts, location, camera or accounts.
 
 ## Purchases
 
@@ -51,13 +56,14 @@ Questions about privacy: open an issue at https://github.com/sanalybol-create/re
 
 # Retono — Политика конфиденциальности
 
-_Обновлено: 12 октября 2026 г._
+_Обновлено: 30 октября 2026 г._
 
 **Retono не собирает, не хранит на серверах, не продаёт и не передаёт никакие персональные данные.** Вся обработка звука происходит на вашем устройстве.
 
 - Добавленные песни копируются во внутреннюю память приложения на устройстве. Разделение, смена тональности и темпа, распознавание аккордов и сохранение работают **только на устройстве**, звук **никуда не отправляется**.
+- **Микрофон** нужен только тюнеру: звук анализируется на устройстве в реальном времени и сразу отбрасывается — **не записывается, не сохраняется и никуда не отправляется**. Микрофон работает, только пока открыт тюнер и только если вы это разрешили.
 - Интернет нужен только для **скачивания моделей нейросети** при первом разделении (из jsDelivr или GitHub). Эти сервисы, как при любом скачивании, видят IP-адрес устройства; других данных приложение не передаёт. Модели можно добавить и вручную, без скачивания.
-- Разрешения: уведомления (управление воспроизведением и прогресс разделения), фоновая служба (чтобы музыка и разделение не прерывались) и интернет (только для моделей).
+- Разрешения: уведомления (управление воспроизведением и прогресс разделения), фоновая служба (чтобы музыка и разделение не прерывались), интернет (только для моделей) и микрофон (только для тюнера).
 - Покупка Retono Pro проходит целиком через **Google Play**. Приложение не видит платёжных данных — оно получает от Google Play только статус покупки, чтобы открыть функции Pro на устройстве.
 - В приложении **нет рекламы, аналитики и отслеживания**.
 - Удаление песни удаляет её копию в приложении; удаление приложения удаляет все его данные.
