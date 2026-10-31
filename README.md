@@ -9,11 +9,12 @@ Public files for **Retono: Karaoke & Chords**, an Android app that changes the k
 
 | Folder | Contents |
 |---|---|
-| `models/` | Vocal/instrument separation models the app downloads on first use (2, 4 and 5 tracks). |
+| `models/` | Vocal/instrument separation models the app downloads on first use (2, 4 and 5 tracks; `htdemucs/`: high-quality 6 tracks). |
 | `lame-jni/` | The exact LAME MP3 encoder source code built into the app, with the JNI wrapper and build script. |
 | `play/` | Short screen recordings used for the Google Play foreground-service declaration. |
 
 ## Licenses
 
 - **Separation models** — converted to ONNX from [Spleeter](https://github.com/deezer/spleeter) by Deezer Research (MIT License). The 2-track model comes from the [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) export (Apache License 2.0); the 4- and 5-track models were converted from the original Spleeter checkpoints. The 5-track files are split into parts under 20 MB for CDN delivery and joined by the app.
+- **High-quality separation model** (`models/htdemucs/`) — [Demucs v4](https://github.com/facebookresearch/demucs) `htdemucs_6s` by Meta AI (MIT License), exported to ONNX without its STFT stage (the app computes the STFT); weights stored as float16. Split into parts under 20 MB for CDN delivery and joined by the app.
 - **LAME** — GNU Lesser General Public License 2.0, see `lame-jni/lame/COPYING`. You may rebuild `libmp3lame` from `lame-jni/` with the Android NDK (`CMakeLists.txt`) and replace the library in the app.
